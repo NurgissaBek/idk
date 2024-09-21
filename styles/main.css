@@ -2,6 +2,15 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+}
+
 .foodmart-logo {
   font-family: "Fascinate Inline", system-ui;
   font-weight: 400;
@@ -10,12 +19,21 @@
 }
 
 .navbar {
-  background-color: rgb(187, 255, 187);;
+  background-color: rgb(187, 255, 187);
 }
 
 .category-dropdown:hover .category-dropdown-menu {
   display: block;
 }
+
+main {
+  min-height: 100vh; 
+}
+
+footer {
+  background-color: rgb(187, 255, 187);
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
   position: fixed;

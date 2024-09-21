@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <header class="navbar py-2 px-5">
+    <header class="navbar py-2 px-5 sticky-top">
       <div class="container-fluid mx-5">
         <a class="navbar-brand nav-link foodmart-logo" href="index.html">FoodMart</a>
         <div class="dropdown category-dropdown ms-5 mx-2">
@@ -39,12 +39,12 @@
         <ul class="navbar-nav ms-auto d-flex flex-row align-items-center gap-3">
           <li class="nav-item">
             <a class="nav-link" href="">
-              <button class="btn btn-success border-2"><i class="bi bi-heart"></i></button>
+              <button class="btn btn-success border-2 rounded-4"><i class="bi bi-heart"></i></button>
             </a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button class="btn btn-success border-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-basket me-2"></i>
+              <button class="btn btn-success border-2 rounded-4 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-basket me-2"></i>
                 Корзина
               </button>
               <div class="dropdown-menu">
@@ -70,12 +70,73 @@
           </li>
           <li class="nav-item">
             <a href="profile.html">
-              <button class="btn btn-success border-2"><i class="bi bi-person me-2"></i>Профиль</button>
+              <button class="btn btn-success border-2 rounded-4"><i class="bi bi-person me-2"></i>Профиль</button>
             </a>
           </li>
         </ul>
       </div>
     </header>
-    <main></main>
+    <div class="container-xxl mt-3">
+      <main class=""></main>
+    </div>
+    <footer class="py-4">
+      <div class="container py-4 px-5">
+        <div class="row ">
+          <div class="col-lg-2">
+            <a class="navbar-brand nav-link foodmart-logo" href="index.html">FoodMart</a>
+            <ul class="list-unstyled small">
+              <li class="mb-2">
+                Онлайн магазин продуктов
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 offset-lg-2">
+            <h5>Информация</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="">Спецпредложения</a>
+              </li>
+              <li class="mb-2">
+                <a href="">Условия пользования</a>
+              </li>
+              <li class="mb-2">
+                <a href="">Вакансии</a>
+              </li>
+              <li class="mb-2">
+                <a href="">О нас</a>
+              </li>
+              <li class="mb-2">
+                <a href="">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Контакты</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-envelope me-2"></i>info@foodmart.kz
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-envelope me-2"></i>offer@foodmart.kz
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-envelope me-2"></i>marketing@foodmart.kz
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-telephone me-2"></i>+7 (777) 777-77-77
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <h5>Авторы</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">Nurali Iskakov</li>
+              <li class="mb-2">Nurgissa Beknazarov</li>
+              <li class="mb-2">Yerassyl Temirkhan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
