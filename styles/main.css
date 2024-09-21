@@ -58,10 +58,12 @@ footer {
   display: block;
   position: fixed;
   padding: 10px;
+}
+.dropdown-cart {
   width: 200px;
   transform: translateX(-17%);
-  margin-top: 10px;
 }
+
 .text-short{
   width: 120px;
   white-space: nowrap;
