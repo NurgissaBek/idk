@@ -37,3 +37,9 @@ main {
 footer {
   background-color: rgb(187, 255, 187);
 }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  position: fixed;
+  padding: 10px;
+}
