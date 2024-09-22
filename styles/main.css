@@ -93,3 +93,14 @@ footer {
   height: 100px;
   object-fit: cover;
 }
+.back-like {
+  background-image: url('../images/scale_1200.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row-liked {
+  width: 70%;
+}
