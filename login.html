@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Вход</title>
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,16 +21,16 @@
             Категории
           </button>
           <ul class="dropdown-menu dropdown-menu-lg-end category-dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="categoryDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Фрукты, ягоды</a></li>
-            <li><a class="dropdown-item" href="#">Овощи, зелень</a></li>
-            <li><a class="dropdown-item" href="#">Молочные продукты, яйца</a></li>
-            <li><a class="dropdown-item" href="#">Мясо, птица</a></li>
-            <li><a class="dropdown-item" href="#">Рыба, морепродукты</a></li>
-            <li><a class="dropdown-item" href="#">Крупы, макароны</a></li>
-            <li><a class="dropdown-item" href="#">Хлеб, выпечка</a></li>
-            <li><a class="dropdown-item" href="#">Конфеты, печенье, снеки</a></li>
-            <li><a class="dropdown-item" href="#">Соки, напитки</a></li>
-            <li><a class="dropdown-item" href="#">Чай, кофе</a></li>
+            <li><a class="dropdown-item" href="fruits-berries.html">Фрукты, ягоды</a></li>
+            <li><a class="dropdown-item" href="vegetables-herbs.html">Овощи, зелень</a></li>
+            <li><a class="dropdown-item" href="dairy-eggs.html">Молочные продукты, яйца</a></li>
+            <li><a class="dropdown-item" href="meat-poultry.html">Мясо, птица</a></li>
+            <li><a class="dropdown-item" href="fish-seafood.html">Рыба, морепродукты</a></li>
+            <li><a class="dropdown-item" href="grain-pasta.html">Крупы, макароны</a></li>
+            <li><a class="dropdown-item" href="bread-baked.html">Хлеб, выпечка</a></li>
+            <li><a class="dropdown-item" href="candies-cookies-snacks.html">Конфеты, печенье, снеки</a></li>
+            <li><a class="dropdown-item" href="drinks.html">Соки, напитки</a></li>
+            <li><a class="dropdown-item" href="tea-coffee.html">Чай, кофе</a></li>
           </ul>
         </div>
         <form class="d-flex mx-2" role="search">
@@ -48,23 +48,33 @@
               <button class="btn btn-success border-2 rounded-4 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-basket me-2"></i>
                 Корзина
               </button>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu dropdown-cart">
                 <table class="table-sm table-hover">
                   <tr>
-                    <td>Актуаль Персик Маракуйя 1л</td>
+                    <td class="text-short">
+                      <img src="images/drinks/actual_peach_passionfruit.jpg" class="cart-min-img" alt="">
+                      Актуаль Персик Маракуйя 1л
+                    </td>
                     <td>10шт</td>
                   </tr>
                   <tr>
-                    <td>Lays Чили Лайм 200г</td>
+                    <td class="text-short">
+                      <img src="images/lays_chili_lime.jpg" class="cart-min-img" alt="">
+                      Lays Чили Лайм 200г
+                    </td>
                     <td>5шт</td>
                   </tr>
                   <tr>
-                    <td>Ташкентские Лимоны</td>
+                    <td class="text-short">
+                      <img src="images/fruits-berries/tashkent_lemon.png" class="cart-min-img" alt="">
+                      Ташкентские Лимоны
+                    </td>
                     <td>2шт</td>
                   </tr>
                 </table>
-                <a href="cart.html">
-                  <button class="btn btn-success border-2">Смотреть дальше</button>
+                <hr class="dropdown-divider">
+                <a href="cart.html" class="button-cart">
+                  <button class="btn btn-success border-2">Вся корзина</button>
                 </a>
               </div>
             </div>
@@ -77,25 +87,27 @@
         </ul>
       </div>
     </header>
-    <main class="bacmain d-flex align-items-center justify-content-center">
-      <div class="form-container p-5">
-        <h2 class="text-center mb-4">Login</h2>
-        <form>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Введите вашу электронную почту" required>
+    <div class="bacmain">
+      <main class="container d-flex align-items-center justify-content-center">
+        <div class="form-container p-4">
+          <h2 class="text-center mb-4">Login</h2>
+          <form class="auth-form">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Введите вашу электронную почту" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Введите ваш пароль" required>
+            </div>
+            <button id="login_btn" type="submit" class="btn btn-success w-100">Войти</button>
+          </form>
+          <div class="mt-3 text-center">
+            <p>Нет аккаунта? <a href="register.html" class="text-success">Зарегистрироваться</a></p>
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Введите ваш пароль" required>
-          </div>
-          <button id="login_btn" type="submit" class="btn btn-success w-100">Войти</button>
-        </form>
-        <div class="mt-3 text-center">
-          <p>Нет аккаунта? <a href="register.html" class="text-success">Зарегистрироваться</a></p>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
     <footer class="py-4">
       <div class="container py-4 px-5">
         <div class="row ">
