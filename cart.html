@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Корзина</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="navbar py-2 px-5 sticky-top">
+      <div class="container-fluid mx-5">
+        <a class="navbar-brand nav-link foodmart-logo" href="index.html">FoodMart</a>
+        <div class="dropdown category-dropdown ms-5 mx-2">
+          <button id="categoryDropdownMenuLink" class="btn btn-light dropdown-toggle border-black border-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Категории
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end category-dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="categoryDropdownMenuLink">
+            <li><a class="dropdown-item" href="fruits-berries.html">Фрукты, ягоды</a></li>
+            <li><a class="dropdown-item" href="vegetables-herbs.html">Овощи, зелень</a></li>
+            <li><a class="dropdown-item" href="dairy-eggs.html">Молочные продукты, яйца</a></li>
+            <li><a class="dropdown-item" href="meat-poultry.html">Мясо, птица</a></li>
+            <li><a class="dropdown-item" href="fish-seafood.html">Рыба, морепродукты</a></li>
+            <li><a class="dropdown-item" href="grain-pasta.html">Крупы, макароны</a></li>
+            <li><a class="dropdown-item" href="bread-baked.html">Хлеб, выпечка</a></li>
+            <li><a class="dropdown-item" href="candies-cookies-snacks.html">Конфеты, печенье, снеки</a></li>
+            <li><a class="dropdown-item" href="drinks.html">Соки, напитки</a></li>
+            <li><a class="dropdown-item" href="tea-coffee.html">Чай, кофе</a></li>
+          </ul>
+        </div>
+        <form class="d-flex mx-2" role="search">
+          <input class="form-control me-2 border-black border-2" type="search" placeholder="Поиск" aria-label="Search">
+          <button class="btn btn-success border-2" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <ul class="navbar-nav ms-auto d-flex flex-row align-items-center gap-3">
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <button class="btn btn-success border-2 rounded-4"><i class="bi bi-heart"></i></button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-success border-2 rounded-4 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-basket me-2"></i>
+                Корзина
+              </button>
+              <div class="dropdown-menu dropdown-cart">
+                <table class="table-sm table-hover">
+                  <tr>
+                    <td class="text-short">
+                      <img src="images/drinks/actual_peach_passionfruit.jpg" class="cart-min-img" alt="">
+                      Актуаль Персик Маракуйя 1л
+                    </td>
+                    <td>10шт</td>
+                  </tr>
+                  <tr>
+                    <td class="text-short">
+                      <img src="images/lays_chili_lime.jpg" class="cart-min-img" alt="">
+                      Lays Чили Лайм 200г
+                    </td>
+                    <td>5шт</td>
+                  </tr>
+                  <tr>
+                    <td class="text-short">
+                      <img src="images/fruits-berries/tashkent_lemon.png" class="cart-min-img" alt="">
+                      Ташкентские Лимоны
+                    </td>
+                    <td>2шт</td>
+                  </tr>
+                </table>
+                <hr class="dropdown-divider">
+                <a href="cart.html" class="button-cart">
+                  <button class="btn btn-success border-2">Вся корзина</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html">
+              <button class="btn btn-success border-2 rounded-4"><i class="bi bi-person me-2"></i>Профиль</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container-xxl mt-5 px-5">
+      <main class="mx-5">
+        
+      </main>
+    </div>
+    <footer class="py-4 mt-5">
+      <div class="container py-4 px-5">
+        <div class="row ">
+          <div class="col-lg-2">
+            <a class="navbar-brand nav-link foodmart-logo" href="index.html">FoodMart</a>
+            <ul class="list-unstyled small">
+              <li class="mb-2">
+                Онлайн магазин продуктов
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 offset-lg-2">
+            <h5>Информация</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="">Спецпредложения</a>
+              </li>
+              <li class="mb-2">
+                <a href="">Условия пользования</a>
+              </li>
+              <li class="mb-2">
+                <a href="">Вакансии</a>
+              </li>
+              <li class="mb-2">
+                <a href="">О нас</a>
+              </li>
+              <li class="mb-2">
+                <a href="">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Контакты</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-envelope me-2"></i>info@foodmart.kz
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-envelope me-2"></i>offer@foodmart.kz
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-envelope me-2"></i>marketing@foodmart.kz
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-telephone me-2"></i>+7 (777) 777-77-77
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <h5>Авторы</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">Nurali Iskakov</li>
+              <li class="mb-2">Nurgissa Beknazarov</li>
+              <li class="mb-2">Yerassyl Temirkhan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
