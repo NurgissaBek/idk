@@ -58,6 +58,7 @@ footer {
   position: fixed;
   padding: 10px;
 }
+
 .dropdown-cart {
   width: 200px;
   transform: translateX(-17%);
@@ -70,38 +71,47 @@ footer {
   text-overflow: ellipsis; 
   display: block;
 }
+
 .cart-min-img {
   width: 20px;
   height: auto;
 }
+
 .button-cart {
   display: flex;
   justify-content: center;
 }
+
 .liked-smth {
   font-size: 1.2rem;
 }
+
 .btn-liked {
   border-color: crimson;
   background-color: crimson;
 }
+
 .bonuses {
   background-color: rgb(144, 238, 144);
   border-color: rgb(144, 238, 144);;
 }
+
 .additional {
   margin-top: 20px;
 }
+
 .liked-img {
   width: 100px;
   height: 100px;
   object-fit: cover;
 }
+
 .back-like {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .row-liked {
   width: 70%;
 }
