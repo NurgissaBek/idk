@@ -81,6 +81,10 @@ footer {
 .liked-smth {
   font-size: 1.2rem;
 }
+.btn-liked {
+  border-color: crimson;
+  background-color: crimson;
+}
 .bonuses {
   background-color: rgb(144, 238, 144);
   border-color: rgb(144, 238, 144);;
@@ -89,14 +93,11 @@ footer {
   margin-top: 20px;
 }
 .liked-img {
-  width: 100%;
+  width: 100px;
   height: 100px;
   object-fit: cover;
 }
 .back-like {
-  background-image: url('../images/scale_1200.png');
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
