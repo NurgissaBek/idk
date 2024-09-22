@@ -2,16 +2,14 @@
   background-image: url('../images/scale_1200.png');
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .form-container {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+  width: 350px;
+  margin: 0 auto;
 }
 
 
