@@ -115,3 +115,102 @@ footer {
 .row-liked {
   width: 70%;
 }
+#navbar-toggler{
+  position: relative;
+}
+
+.nav-menu-overlay {
+  position: absolute;
+  top: 100%; right: 0;
+  width: 200px;
+  height: 300px; 
+  z-index: 1050;
+}
+
+#navItems {
+  display: none;
+}
+
+.nav-items-mobile {
+  
+  background-color: white;
+  border-radius: 8px;
+  width: 95%;
+  height: 95%;
+  
+}
+
+#navMenuOverlay.d-none {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#navMenuOverlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (min-width: 992px) {
+  #navItems {
+    display: flex !important;
+  }
+  #navMenuOverlay {
+    display: none;
+  }
+}
+
+@media (max-width: 646px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu-overlay {
+    position: absolute;
+    top: 37%; right: 0;
+    width: 200px;
+    height: 300px; 
+    z-index: 1050;
+  }
+
+  .navbar-brand {
+    order: 1;
+    flex-grow: 1;
+  }
+
+  #burger-button {
+    order: 1;
+    align-self: flex-end;
+  }
+
+  form[role="search"] {
+    order: 2;
+    width: 100%;
+    margin: 10px;
+  }
+
+  .category-dropdown {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  #categoryDropdownMenuLink {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
