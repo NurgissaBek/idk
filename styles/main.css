@@ -115,7 +115,8 @@ footer {
 .row-liked {
   width: 70%;
 }
-#navbar-toggler{
+
+#navbar-toggler {
   position: relative;
 }
 
@@ -132,12 +133,10 @@ footer {
 }
 
 .nav-items-mobile {
-  
   background-color: white;
   border-radius: 8px;
   width: 95%;
   height: 95%;
-  
 }
 
 #navMenuOverlay.d-none {
@@ -201,6 +200,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
