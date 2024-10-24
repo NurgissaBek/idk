@@ -79,7 +79,7 @@ function loadHeader() {
                 </button>
                 <div id="navMenuOverlay" class="nav-menu-overlay d-none">
                     <div class="nav-items-mobile flex-column gap-3">
---                        <ul id="cart-profile-liked-mobile" class="navbar-nav ms-auto align-items-center gap-3">
+                       <ul id="cart-profile-liked-mobile" class="navbar-nav ms-auto align-items-center gap-3">
                             <li class="nav-item">
                                 <a class="nav-link" href="liked.html">
                                     <button class="btn btn-success border-2 rounded-4"><i class="bi bi-heart"></i></button>
@@ -96,10 +96,9 @@ function loadHeader() {
                                 </a>
                             </li>
                         </ul>
-                        <!-- Добавляем категории и форму поиска для мобильных экранов -->
-                        <div id="mobile-search-and-categories" class="d-none">
+                        <div id="mobile-search-and-categories" class="d-flex justify-content-center d-none my-3">
                             <div class="dropdown category-dropdown">
-                                <button class="btn btn-light dropdown-toggle border-black border-2" type="button" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle border-black border-2 mx-2" type="button" aria-expanded="false">
                                     Категории
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-lg-end category-dropdown-menu me-auto mb-2 mb-lg-0">
@@ -121,7 +120,7 @@ function loadHeader() {
                             </form>
                         </div>
                     </div>
-                    <button id="close-menu-btn" class="btn btn-danger border-2">Закрыть меню</button>
+                    <button id="close-menu-btn" class="btn btn-danger border-2">Х</button>
                 </div>
             </div>
         </header>
@@ -136,40 +135,40 @@ function loadHeader() {
 
     burgerButton.addEventListener('click', () => {
         navMenuOverlay.classList.toggle('d-none');
-
-        // Проверяем ширину окна для управления состоянием кнопки
-        if (window.innerWidth >= 646 && window.innerWidth < 992) {
-            // Скрываем категорию и поисковую форму в хедере
-            document.getElementById('mobile-search-and-categories').classList.add('d-none');
-            //document.getElementById('categoryDropdownMenuLink').classList.remove('d-none');
-            //document.querySelector('.d-flex[role="search"]').classList.remove('d-none');
-        } else if (window.innerWidth >= 992){
+    
+        if (window.innerWidth >= 706 && window.innerWidth < 992) {
+            // Элементы видны в хедере, скрываем в меню
             document.getElementById('categoryDropdownMenuLink').classList.remove('d-none');
             document.querySelector('.d-flex[role="search"]').classList.remove('d-none');
             mobileSearchAndCategories.classList.add('d-none');
-        } else if (window.innerWidth <645){
+        } else if (window.innerWidth < 706) {
+            // Элементы скрыты в хедере, показываем в меню
             document.getElementById('categoryDropdownMenuLink').classList.add('d-none');
-            document.querySelector('.d-flex[role="search"]').classList.add('d-none'); 
-            document.getElementById('mobile-search-and-categories').classList.remove('d-none');
+            document.querySelector('.d-flex[role="search"]').classList.add('d-none');
+            mobileSearchAndCategories.classList.remove('d-none');
         }
     });
+    
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 706 && window.innerWidth < 992) {
+            // Показываем элементы в хедере
+            document.getElementById('categoryDropdownMenuLink').classList.remove('d-none');
+            document.querySelector('.d-flex[role="search"]').classList.remove('d-none');
+            mobileSearchAndCategories.classList.add('d-none');
+        } else if (window.innerWidth < 706) {
+            // Скрываем элементы в хедере, показываем в меню
+            document.getElementById('categoryDropdownMenuLink').classList.add('d-none');
+            document.querySelector('.d-flex[role="search"]').classList.add('d-none');
+            mobileSearchAndCategories.classList.remove('d-none');
+        }
+    });
+    
+    
 
     closeMenuButton.addEventListener('click', () => {
         navMenuOverlay.classList.add('d-none');
         // Показываем элементы хедера при закрытии
         
-    });
-
-    window.addEventListener('resize', () => {
-        if (window.innerWidth >= 992) {
-            // Показываем элементы хедера на больших экранах
-            document.getElementById('categoryDropdownMenuLink').classList.remove('d-none');
-            document.querySelector('.d-flex[role="search"]').classList.remove('d-none');
-            mobileSearchAndCategories.classList.add('d-none');
-        } else {
-            // Скрываем элементы хедера на маленьких экранах
-            mobileSearchAndCategories.classList.remove('d-none');
-        }
     });
 }
 

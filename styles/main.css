@@ -121,9 +121,9 @@ footer {
 }
 
 .nav-menu-overlay {
-  position: absolute;
-  top: 100%; right: 0;
-  width: 200px;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
   height: 300px; 
   z-index: 1050;
 }
@@ -135,8 +135,17 @@ footer {
 .nav-items-mobile {
   background-color: white;
   border-radius: 8px;
-  width: 95%;
+  width: 100%;
   height: 95%;
+  position: relative;
+}
+#close-menu-btn {
+  position: absolute; /* Position the button absolutely */
+  top: 3px; /* Adjust as necessary */
+  right: 3px; /* Adjust as necessary */
+  border: none;
+  cursor: pointer;
+  z-index: 1060; /* Ensure it appears above the overlay */
 }
 
 #navMenuOverlay.d-none {
@@ -158,46 +167,27 @@ footer {
   }
 }
 
-@media (max-width: 646px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-menu-overlay {
-    position: absolute;
-    top: 37%; right: 0;
-    width: 200px;
-    height: 300px; 
-    z-index: 1050;
-  }
-
-  .navbar-brand {
-    order: 1;
-    flex-grow: 1;
-  }
-
-  #burger-button {
-    order: 1;
-    align-self: flex-end;
-  }
-
+/* Отображение элементов хедера для экранов от 706px до 991px */
+@media (min-width: 706px) and (max-width: 991px) {
+  #categoryDropdownMenuLink,
   form[role="search"] {
-    order: 2;
-    width: 100%;
-    margin: 10px;
+      display: block;
   }
 
-  .category-dropdown {
-    order: 3;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
+  #mobile-search-and-categories {
+      display: none;
+  }
+}
+
+/* Отображение только бургер-кнопки для экранов меньше 706px */
+@media (max-width: 705px) {
+  #categoryDropdownMenuLink,
+  form[role="search"] {
+      display: none;
   }
 
-  #categoryDropdownMenuLink {
-    width: 100%;
+  #mobile-search-and-categories {
+      display: block;
   }
 }
 
