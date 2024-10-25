@@ -116,91 +116,51 @@ footer {
   width: 70%;
 }
 
-#navbar-toggler {
-  position: relative;
-}
-
-.nav-menu-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 300px; 
-  z-index: 1050;
-}
-
-#navItems {
-  display: none;
-}
-
-.nav-items-mobile {
-  background-color: white;
-  border-radius: 8px;
-  width: 100%;
-  height: 95%;
-  position: relative;
-}
-#close-menu-btn {
-  position: absolute; /* Position the button absolutely */
-  top: 3px; /* Adjust as necessary */
-  right: 3px; /* Adjust as necessary */
-  border: none;
-  cursor: pointer;
-  z-index: 1060; /* Ensure it appears above the overlay */
-}
-
-#navMenuOverlay.d-none {
-  opacity: 0;
-  pointer-events: none;
-}
-
-#navMenuOverlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-@media (min-width: 992px) {
-  #navItems {
-    display: flex !important;
-  }
-  #navMenuOverlay {
+@media (max-width: 991px) {
+  /* Скрыть текст на кнопках при уменьшении экрана */
+  .btn .button-text {
     display: none;
   }
 }
 
-/* Отображение элементов хедера для экранов от 706px до 991px */
-@media (min-width: 706px) and (max-width: 991px) {
-  #categoryDropdownMenuLink,
-  form[role="search"] {
-      display: block;
-  }
-
-  #mobile-search-and-categories {
-      display: none;
+@media (min-width: 992px) {
+  /* Показать текст на кнопках для больших экранов */
+  .btn .button-text {
+    display: inline;
   }
 }
 
-/* Отображение только бургер-кнопки для экранов меньше 706px */
-@media (max-width: 705px) {
-  #categoryDropdownMenuLink,
-  form[role="search"] {
-      display: none;
+@media (max-width: 827px) {
+  /* Версия для маленьких экранов */
+  .d-lg-none {
+    display: flex !important; /* Показать версию для маленьких экранов */
   }
-
-  #mobile-search-and-categories {
-      display: block;
+  .d-none {
+    display: none !important; /* Скрыть элементы для больших экранов */
+  }
+  #search-input{
+    max-width: 140px;
   }
 }
 
+@media (min-width: 828px) {
+  /* Версия для больших экранов */
+  .d-none {
+    display: flex !important; /* Показать элементы для больших экранов */
+  }
+  .d-lg-none {
+    display: none !important; /* Скрыть элементы для маленьких экранов */
+  }
+  .btn-success{
+    white-space: nowrap;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width:991px) {
+  .dropdown-cart {
+    width: 200px;
+    right: -30px;
+    transform: translateX(-17%);
+  }
+  
+}
